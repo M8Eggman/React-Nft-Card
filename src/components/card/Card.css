@@ -1,3 +1,6 @@
+/* font */
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
 /* variable css */
 :root {
   --Soft_blue: hsl(215, 51%, 70%);
@@ -6,9 +9,6 @@
   --Very_dark_blue_line: hsl(215, 32%, 27%);
   --White: rgb(255, 255, 255);
 }
-
-/* font */
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 
 /* style général */
 a {
@@ -34,6 +34,31 @@ a {
   width: 310px;
   height: 310px;
   border-radius: 10px;
+  transition: 250ms ease;
+  position: relative;
+}
+.card .cardHeader::after {
+  position: absolute;
+  content: "";
+  background-color: hsla(178, 100%, 50%, 0);
+  width: 310px;
+  height: 310px;
+  top: 0px;
+  border-radius: 10px;
+  transition: 250ms ease;
+}
+.card .cardHeader:hover::after {
+  background-color: hsla(178, 100%, 50%, 0.5);
+}
+.card .cardHeader img {
+  display: none;
+  opacity: 0;
+}
+.card .cardHeader:hover img {
+  display: block;
+  z-index: 1;
+  opacity: 1;
+  transition: 250ms ease;
 }
 .card .cardHeader a {
   width: 100%;
@@ -41,15 +66,6 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.card .cardHeader img {
-  display: none;
-}
-.card .cardHeader:hover {
-  background-image: linear-gradient(hsl(178, 100%, 50%, 50%)), url(../../assets/images/image-equilibrium.jpg);
-}
-.card .cardHeader:hover img {
-  display: block;
 }
 
 /* card body */
@@ -62,6 +78,11 @@ a {
   margin-block: 25px;
   font-size: 20px;
   font-weight: 600;
+  transition: 250ms;
+}
+.card .cardBody a:hover {
+  color: var(--Cyan);
+  transition: 250ms;
 }
 .card .cardBody > p {
   color: var(--Soft_blue);
@@ -92,6 +113,7 @@ a {
   display: flex;
   align-items: center;
   gap: 20px;
+  padding-top: 10px;
 }
 .card .cardFooter > div {
   width: 32px;
