@@ -1,29 +1,39 @@
 import "./Card.css";
-import userImg from "../../assets/images/image-avatar.png"
-import view from "../../assets/images/icon-view.svg"
-import eth from "../../assets/images/icon-ethereum.svg"
-import clock from "../../assets/images/icon-clock.svg"
+import view from "../../assets/images/icon-view.svg";
+import eth from "../../assets/images/icon-ethereum.svg";
+import clock from "../../assets/images/icon-clock.svg";
+import userImg from "../../assets/images/image-avatar.png";
 
 function Card() {
-  return <div className="card">
-    <div className="header">
-        <a href=""><img src="" alt="" /></a>
-    </div>
-    <div className="body">
-        <a href=""></a>
-        <p></p>
+  return (
+    <div className="card">
+      <div className="cardHeader">
+        <a href="">
+          <img src={view} alt="" />
+        </a>
+      </div>
+      <div className="cardBody">
+        <a href="">Equilibrium #3429</a>
+        <p>Our Equilibrium collection promotes balance and calm.</p>
         <div>
-            <p><img src="" alt="" /></p>
-            <p><img src="" alt="" /></p>
+          <p>
+            <img src={eth} alt="" /> 0.041 ETH
+          </p>
+          <p>
+            <img src={clock} alt="" /> 3 days left
+          </p>
         </div>
-    </div>
-    <div className="footer">
+      </div>
+      <div className="cardFooter">
         <div>
-            <img src="" alt="" />
+          <img src={userImg} alt="" />
         </div>
-        <p><span></span></p>
+        <p>
+          Creation of <a href="">Jules Wyvern</a>
+        </p>
+      </div>
     </div>
-  </div>;
+  );
 }
 
 export default Card;
